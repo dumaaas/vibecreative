@@ -84,7 +84,7 @@ export default function Contact() {
       <div>
         <div className="relative flex flex-row items-center justify-between min-h-[800px]">
           <div
-            className="w-full h-full absolute top-0 left-0 z-10"
+            className="absolute top-0 left-0 z-10 w-full h-full"
             style={{
               backgroundImage: `url(${contactCover.src})`,
               backgroundPosition: "center",
@@ -92,7 +92,7 @@ export default function Contact() {
               backgroundSize: "cover",
             }}
           ></div>
-          <div className="bg-black bg-opacity-80 absolute top-0 left-0 w-full h-full z-10"></div>
+          <div className="absolute top-0 left-0 z-10 w-full h-full bg-black bg-opacity-80"></div>
           <div className="container lg:max-w-screen-xl z-20 flex md:flex-row flex-col items-center justify-between mt-[60px] md:mt-0">
             <h2 className="grow basis-1 z-20 text-white mb-[30px] lg:mb-0 lg:text-[72px] lg:leading-[79px] text-[48px] leading-[53px] font-semibold">
               Contact Us
@@ -226,9 +226,9 @@ export default function Contact() {
               width={"100%"}
               height={"100%"}
               style={{ border: 0 }}
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
