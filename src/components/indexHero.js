@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function IndexHero() {
   return (
@@ -19,9 +20,9 @@ export default function IndexHero() {
         <p className="lg:text-[24px] lg:leading-[36px] text-white mb-[40px] text-[20px] leading-[30px]">
           We know how to make your business grow.
         </p>
-        <a className="btn" href="https://admin.prologs.us/login">
+        <Link className="btn" href="/contact">
           Contact us
-        </a>
+        </Link>
       </div>
     </div>
   );

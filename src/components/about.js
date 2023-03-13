@@ -1,5 +1,6 @@
 import Image from "next/image";
 import vibePic from "../../public/vibe-about.png";
+import Link from "next/link";
 export default function About({ type }) {
   return (
     <div
@@ -13,7 +14,9 @@ export default function About({ type }) {
         } container lg:max-w-screen-xl flex md:flex-row flex-col items-start justify-between gap-[50px]`}
       >
         <div
-          className={`${type === "left" ? "md:order-1" : "md:order-2"} flex-[50%]`}
+          className={`${
+            type === "left" ? "md:order-1" : "md:order-2"
+          } flex-[50%]`}
         >
           <div
             className={`${
@@ -26,7 +29,9 @@ export default function About({ type }) {
           </div>
         </div>
         <div
-          className={`${type === "left" ? "md:order-2" : "md:order-1"} flex-[50%]`}
+          className={`${
+            type === "left" ? "md:order-2" : "md:order-1"
+          } flex-[50%]`}
         >
           <h2
             className={`${
@@ -64,9 +69,12 @@ export default function About({ type }) {
             </div>
           </div>
           <div className="flex items-center justify-center md:items-start md:justify-start">
-            <button className={`${type === "left" ? "" : "hidden"}`}>
+            <Link
+              href="/about"
+              className={`${type === "left" ? "" : "hidden"} btn`}
+            >
               See more
-            </button>
+            </Link>
           </div>
         </div>
       </div>
