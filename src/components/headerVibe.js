@@ -8,12 +8,12 @@ import { navigation } from "@/helpers/staticData";
 import MenuOpenIcon from "../../public/menu-open.svg";
 import MenuCloseIcon from "../../public/menu-close.svg";
 import { useState, useRef, useEffect } from "react";
-import { Lato } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const poppins = Lato({
-  weight: ["400"],
-  subsets: ["latin"],
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin-ext"],
 });
 export default function Header() {
   const router = useRouter();

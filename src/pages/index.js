@@ -42,10 +42,50 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Next Template Website</title>
-        <meta name="description" content="Next template for websites..." />
+        <title>Vibe! Digital Marketing Agency | Chicago, Illinois</title>
+        <meta
+          name="description"
+          content="We know how to run your social media accounts, create online campaigns and content according to your needs"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="keywords"
+          content="Vibe, Design, Web Design, Instagram, Social Marketing, Logo Design, Marketing Agency, Social Media Management, Advertising"
+        />
+        <meta name="author" content="Marko Dumnic" />
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        ></meta>
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content="Vibe! Digital Marketing Agency | Chicago, Illinois"
+        />
+        <meta
+          property="og:description"
+          content="We know how to run your social media accounts, create online campaigns and content according to your needs"
+        />
+        <meta property="og:url" content="https://vibecreative.net/" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Vibe!"></meta>
+        <meta
+          property="og:image"
+          content=" https://vibecreative.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvibe-about.32d3ffc5.png&w=640&q=75"
+          class="yoast-seo-meta-tag"
+        ></meta>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:label1"
+          content="Est. reading time"
+          class="yoast-seo-meta-tag"
+        />
+        <meta
+          name="twitter:data1"
+          content="7 minutes"
+          class="yoast-seo-meta-tag"
+        />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
         <IndexHero />
@@ -58,7 +98,7 @@ export default function Home() {
         <About type="left" />
         <div className="relative flex flex-col items-center justify-center text-center min-h-[500px]">
           <div
-            className="w-full h-full absolute top-0 left-0 z-10"
+            className="absolute top-0 left-0 z-10 w-full h-full"
             style={{
               backgroundImage: `url(${portfolioImg.src})`,
               backgroundPosition: "center",
@@ -66,7 +106,7 @@ export default function Home() {
               backgroundSize: "cover",
             }}
           ></div>
-          <div className="bg-black bg-opacity-80 absolute top-0 left-0 w-full h-full z-10"></div>
+          <div className="absolute top-0 left-0 z-10 w-full h-full bg-black bg-opacity-80"></div>
           <h2 className="z-20 text-white text-[32px] leading-[38px] mb-[25px] lg:mb-[30px] font-bold lg:text-[48px] lg:leading-[58px]">
             Check out our work
           </h2>

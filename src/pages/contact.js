@@ -1,23 +1,75 @@
 import Head from "next/head";
-import Image from "next/image";
-import IndexHero from "@/components/indexHero";
-import AboutComponent from "@/components/about";
-import { ourTeam } from "@/helpers/staticData";
 import Newsletter from "@/components/newsletter";
-import bookkeepingImg from "../../public/bookkeeping-img.jpg";
 import contactCover from "../../public/contact-cover.jpg";
-import { useState } from "react";
+import { use, useState } from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [nameError, setNameError] = useState(null);
   const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [lastNameError, setLastNameError] = useState(null);
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState(null);
   const [emailErrorMsg, setEmailErrorMsg] = useState("");
-  const [company, setCompany] = useState("");
-  const [companyError, setCompanyError] = useState(null);
+  const [phone, setPhone] = useState("");
+  const [phoneError, setPhoneError] = useState(null);
   const [message, setMessage] = useState("");
   const [messageError, setMessageError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [showSuccessMsg, setShowSuccessMsg] = useState(false);
+  const [showErrorMsg, setShowErrorMsg] = useState(false);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    checkValidationName(name);
+    checkValidationLastName(lastName);
+    checkEmailError(email);
+    checkPhoneError(phone);
+    checkMessageError(message);
+
+    if (checkIfError()) return;
+
+    emailjs
+      .sendForm(
+        "service_yhtsofp",
+        "vibetemplateid",
+        form.current,
+        "4K4g7WbRRU2wgm6gF"
+      )
+      .then(
+        (result) => {
+          setShowErrorMsg(false);
+          setShowSuccessMsg(true);
+          setIsLoading(false);
+          clearForm();
+        },
+        (error) => {
+          console.log(error.text);
+          setShowErrorMsg(true);
+          setShowSuccessMsg(false);
+          setIsLoading(false);
+        }
+      );
+  };
+
+  const clearForm = () => {
+    setName("");
+    setNameError(null);
+    setLastName("");
+    setLastNameError(null);
+    setEmail("");
+    setEmailError(null);
+    setEmailErrorMsg("");
+    setPhone("");
+    setPhoneError(null);
+    setMessage("");
+    setMessageError(null);
+  };
 
   const checkValidationName = (value) => {
     if (!value.length) {
@@ -26,6 +78,14 @@ export default function Contact() {
       setNameError(false);
     }
     setName(value);
+  };
+  const checkValidationLastName = (value) => {
+    if (!value.length) {
+      setLastNameError(true);
+    } else {
+      setLastNameError(false);
+    }
+    setLastName(value);
   };
   const checkEmailError = (value) => {
     if (!value.length) {
@@ -40,13 +100,13 @@ export default function Contact() {
     }
     setEmail(value);
   };
-  const checkCompanyError = (value) => {
+  const checkPhoneError = (value) => {
     if (!value.length) {
-      setCompanyError(true);
+      setPhoneError(true);
     } else {
-      setCompanyError(false);
+      setPhoneError(false);
     }
-    setCompany(value);
+    setPhone(value);
   };
   const checkMessageError = (value) => {
     if (!value.length) {
@@ -62,24 +122,68 @@ export default function Contact() {
     return emailRegex.test(email);
   }
 
-  const submitContactForm = () => {
-    checkValidationName(name);
-    checkEmailError(email);
-    checkCompanyError(company);
-    checkMessageError(message);
-
-    if (nameError || emailError || companyError || messageError) return;
-
-    // if everything is valid, proceed
-    console.log("Sending email...");
+  const checkIfError = () => {
+    if (
+      nameError ||
+      lastNameError ||
+      emailError ||
+      phoneError ||
+      messageError ||
+      !name.length ||
+      !lastName.length ||
+      !email.length ||
+      !message.length ||
+      !phone.length
+    ) {
+      return true;
+    } else {
+      return false;
+    }
   };
   return (
     <>
       <Head>
-        <title>Next Template Website</title>
-        <meta name="description" content="Next template for websites..." />
+        <title>Contact - Vibe!</title>
+        <meta
+          name="description"
+          content="We know how to run your social media accounts, create online campaigns and content according to your needs."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="keywords"
+          content="Vibe, Design, Web Design, Instagram, Social Marketing, Logo Design, Marketing Agency, Social Media Management, Advertising"
+        />
+        <meta name="author" content="Marko Dumnic" />
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        ></meta>
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Contact - Vibe!" />
+        <meta
+          property="og:description"
+          content="We know how to run your social media accounts, create online campaigns and content according to your needs."
+        />
+        <meta property="og:url" content="https://vibecreative.net/contact" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Vibe!"></meta>
+        <meta
+          property="og:image"
+          content=" https://vibecreative.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvibe-about.32d3ffc5.png&w=640&q=75"
+          class="yoast-seo-meta-tag"
+        ></meta>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:label1"
+          content="Est. reading time"
+          class="yoast-seo-meta-tag"
+        />
+        <meta
+          name="twitter:data1"
+          content="7 minutes"
+          class="yoast-seo-meta-tag"
+        />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div>
         <div className="relative flex flex-row items-center justify-between min-h-[800px]">
@@ -97,7 +201,11 @@ export default function Contact() {
             <h2 className="grow basis-1 z-20 text-white mb-[30px] lg:mb-0 lg:text-[72px] lg:leading-[79px] text-[48px] leading-[53px] font-semibold">
               Contact Us
             </h2>
-            <div className="grow basis-1 z-20 flex flex-col gap-[10px] w-full">
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="grow basis-1 z-20 flex flex-col gap-[10px] w-full"
+            >
               <div className="flex flex-row gap-[20px] w-full">
                 <div className="flex flex-col w-[50%]">
                   <label className="text-white font-bold text-[16px] leading-[30px]">
@@ -110,7 +218,7 @@ export default function Contact() {
                     }
                     className={`${nameError ? " invalid" : ""}`}
                     type="text"
-                    name="firstname"
+                    name="from_firstname"
                   />
                   <p className="text-[14px] leading-[25px] text-white">First</p>
                   {nameError && (
@@ -124,16 +232,18 @@ export default function Contact() {
                     Name <span style={{ color: "#ff0000" }}>*</span>
                   </label>
                   <input
-                    onBlur={(event) => checkValidationName(event.target.value)}
-                    onChange={(event) =>
-                      checkValidationName(event.target.value)
+                    onBlur={(event) =>
+                      checkValidationLastName(event.target.value)
                     }
-                    className={`${nameError ? " invalid" : ""}`}
+                    onChange={(event) =>
+                      checkValidationLastName(event.target.value)
+                    }
+                    className={`${lastNameError ? " invalid" : ""}`}
                     type="text"
-                    name="firstname"
+                    name="from_lastname"
                   />
                   <p className="text-[14px] leading-[25px] text-white">Last</p>
-                  {nameError && (
+                  {lastNameError && (
                     <span className="text-red-600 text-[14px] leading-[27px]">
                       This field is required.
                     </span>
@@ -146,34 +256,30 @@ export default function Contact() {
                     Email <span style={{ color: "#ff0000" }}>*</span>
                   </label>
                   <input
-                    onBlur={(event) => checkValidationName(event.target.value)}
-                    onChange={(event) =>
-                      checkValidationName(event.target.value)
-                    }
-                    className={`${nameError ? " invalid" : ""}`}
+                    onBlur={(event) => checkEmailError(event.target.value)}
+                    onChange={(event) => checkEmailError(event.target.value)}
+                    className={`${emailError ? " invalid" : ""}`}
                     type="text"
-                    name="firstname"
+                    name="from_email"
                   />
-                  {nameError && (
+                  {emailError && (
                     <span className="text-red-600 text-[14px] leading-[27px]">
-                      This field is required.
+                      {emailErrorMsg}
                     </span>
                   )}
                 </div>
                 <div className="flex flex-col w-[50%]">
-                  <label className="opacity-0 text-white font-bold text-[16px] leading-[30px]">
+                  <label className="text-white font-bold text-[16px] leading-[30px]">
                     Phone number <span style={{ color: "#ff0000" }}>*</span>
                   </label>
                   <input
-                    onBlur={(event) => checkValidationName(event.target.value)}
-                    onChange={(event) =>
-                      checkValidationName(event.target.value)
-                    }
-                    className={`${nameError ? " invalid" : ""}`}
+                    onBlur={(event) => checkPhoneError(event.target.value)}
+                    onChange={(event) => checkPhoneError(event.target.value)}
+                    className={`${phoneError ? " invalid" : ""}`}
                     type="text"
-                    name="firstname"
+                    name="from_phone"
                   />
-                  {nameError && (
+                  {phoneError && (
                     <span className="text-red-600 text-[14px] leading-[27px]">
                       This field is required.
                     </span>
@@ -186,23 +292,42 @@ export default function Contact() {
                     Message <span style={{ color: "#ff0000" }}>*</span>
                   </label>
                   <textarea
-                    onBlur={(event) => checkValidationName(event.target.value)}
-                    onChange={(event) =>
-                      checkValidationName(event.target.value)
-                    }
-                    className={`${nameError ? " invalid" : ""}`}
+                    onBlur={(event) => checkMessageError(event.target.value)}
+                    onChange={(event) => checkMessageError(event.target.value)}
+                    className={`${messageError ? " invalid" : ""}`}
                     type="text"
-                    name="firstname"
+                    name="from_message"
                   />
-                  {nameError && (
+                  {messageError && (
                     <span className="text-red-600 text-[14px] leading-[27px]">
                       This field is required.
                     </span>
                   )}
                 </div>
               </div>
-              <button className="mt-[10px] w-[180px]">Send message</button>
-            </div>
+              <button
+                disabled={isLoading || checkIfError()}
+                style={{ opacity: isLoading || checkIfError() ? 0.5 : 1 }}
+                className="mt-[10px] w-[180px]"
+              >
+                Send message
+              </button>
+              {showSuccessMsg && (
+                <div className="bg-[#dff0d8] border border-[#008000] rounded-[8px] py-[12px] px-[16px] mt-[20px]">
+                  <p className="text-[#008000]">
+                    Message sent successfully. We will get back to you shortly!
+                  </p>
+                </div>
+              )}
+
+              {showErrorMsg && (
+                <div className="bg-[#F2DEDE] border border-[#A94442] rounded-[8px] py-[12px] px-[16px] mt-[20px]">
+                  <p className="text-[#A94442]">
+                    Failed to send the message. Please try again later.
+                  </p>
+                </div>
+              )}
+            </form>
           </div>
         </div>
         <div className="container py-[60px] lg:max-w-screen-xl flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-[20px] gap-[40px]">

@@ -11,14 +11,51 @@ export default function Bookkeeping() {
   return (
     <>
       <Head>
-        <title>Next Template Website</title>
-        <meta name="description" content="Next template for websites..." />
+        <title>Bookkeeping - Vibe!</title>
+        <meta
+          name="description"
+          content="We know how to run your social media accounts, create online campaigns and content according to your needs."
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="keywords"
+          content="Vibe, Design, Web Design, Instagram, Social Marketing, Logo Design, Marketing Agency, Social Media Management, Advertising"
+        />
+        <meta name="author" content="Marko Dumnic" />
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        ></meta>
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Bookkeeping - Vibe!" />
+        <meta
+          property="og:description"
+          content="We know how to run your social media accounts, create online campaigns and content according to your needs."
+        />
+        <meta property="og:url" content="https://vibecreative.net/bookkeeping" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Vibe!"></meta>
+        <meta
+          property="og:image"
+          content=" https://vibecreative.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvibe-about.32d3ffc5.png&w=640&q=75"
+          class="yoast-seo-meta-tag"
+        ></meta>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:label1"
+          content="Est. reading time"
+          class="yoast-seo-meta-tag"
+        />
+        <meta
+          name="twitter:data1"
+          content="7 minutes"
+          class="yoast-seo-meta-tag"
+        />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <main>
         <div className="container lg:max-w-screen-xl py-[60px]">
-        <h2 className="relative text-center lg:text-[48px] lg:leading-[58px] text-[32px] leading-[38px] font-bold mb-[60px] md:mb-[70px] after:content-[''] after:absolute after:w-[100px] after:h-[3px] after:left-[50%] after:transform after:translate-x-[-50%] after:translate-y-[50%] after:bg-primary after:bottom-[-20px]">
+          <h2 className="relative text-center lg:text-[48px] lg:leading-[58px] text-[32px] leading-[38px] font-bold mb-[60px] md:mb-[70px] after:content-[''] after:absolute after:w-[100px] after:h-[3px] after:left-[50%] after:transform after:translate-x-[-50%] after:translate-y-[50%] after:bg-primary after:bottom-[-20px]">
             Do you need a professional bookkeeper?
           </h2>
           <div className="flex md:flex-row flex-col md:items-center md:justify-between pt-[10px] md:gap-[20px] gap-[50px]">
@@ -41,7 +78,7 @@ export default function Bookkeeping() {
         </div>
         <div className="relative flex flex-col items-center justify-center text-center min-h-[500px]">
           <div
-            className="w-full h-full absolute top-0 left-0 z-10"
+            className="absolute top-0 left-0 z-10 w-full h-full"
             style={{
               backgroundImage: `url(${bookkeepingCover.src})`,
               backgroundPosition: "center",
@@ -49,7 +86,7 @@ export default function Bookkeeping() {
               backgroundSize: "cover",
             }}
           ></div>
-          <div className="bg-black bg-opacity-80 absolute top-0 left-0 w-full h-full z-10"></div>
+          <div className="absolute top-0 left-0 z-10 w-full h-full bg-black bg-opacity-80"></div>
           <h2 className="px-[1.1em] xl:w-[50%] lg:w-[70%] md:w-[80%] sm:w-[90%] z-20 text-white text-[32px] leading-[38px] mb-[25px] lg:mb-[30px] font-bold lg:text-[48px] lg:leading-[58px]">
             Call us now! Schedule a consult or let’s have a coffee and we will
             be happy to help!

@@ -41,223 +41,231 @@ import sliderImage30 from "../../public/bl.png";
 import sliderImage31 from "../../public/sl.png";
 import sliderImage32 from "../../public/rfc.png";
 import sliderImage33 from "../../public/brabus.png";
+import portfolioImg1 from "../../public/portfolioImg1.png";
+import portfolioImg2 from "../../public/portfolioImg2.png";
+import portfolioImg3 from "../../public/portfolioImg3.png";
+import portfolioImg4 from "../../public/portfolioImg4.png";
+import portfolioImg5 from "../../public/portfolioImg5.png";
+import portfolioImg6 from "../../public/portfolioImg6.png";
+import portfolioImg7 from "../../public/portfolioImg7.png";
+import portfolioImg8 from "../../public/portfolioImg8.png";
+import portfolioImg9 from "../../public/portfolioImg9.png";
+import portfolioImg10 from "../../public/portfolioImg10.png";
+import portfolioImg11 from "../../public/portfolioImg11.png";
+import portfolioImg12 from "../../public/portfolioImg12.png";
+import portfolioImg13 from "../../public/portfolioImg13.png";
+import portfolioImg14 from "../../public/portfolioImg14.png";
+import portfolioImg15 from "../../public/portfolioImg15.png";
+import portfolioImg16 from "../../public/portfolioImg16.png";
+import portfolioImg17 from "../../public/portfolioImg17.png";
+import portfolioImg18 from "../../public/portfolioImg18.png";
+import portfolioImg19 from "../../public/portfolioImg19.png";
+import portfolioImg20 from "../../public/portfolioImg20.png";
+import portfolioImg21 from "../../public/portfolioImg21.png";
+import portfolioImg22 from "../../public/portfolioImg22.png";
+import portfolioImg23 from "../../public/portfolioImg23.png";
+import portfolioImg24 from "../../public/portfolioImg24.png";
+import portfolioImg25 from "../../public/portfolioImg25.png";
+import portfolioImg26 from "../../public/portfolioImg26.png";
+import portfolioImg27 from "../../public/portfolioImg27.png";
+import portfolioImg28 from "../../public/portfolioImg28.png";
+import portfolioImg29 from "../../public/portfolioImg29.png";
+import portfolioImg30 from "../../public/portfolioImg30.png";
+import portfolioImg31 from "../../public/portfolioImg31.png";
+import portfolioImg32 from "../../public/portfolioImg32.png";
 
 export const ourPortfolio = [
   {
     title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    url: "https://amglogisticsinc.net/",
+    desc: "Web design, Advertising & Social media managment",
+    image: portfolioImg1,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
+    title: "D-Line Trucking",
+    url: "http://dlinetruckinginc.net/",
     desc: "Web design",
-    image: stefanImg,
+    image: portfolioImg2,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
+    title: "Euro American Movers",
+    url: "http://euroamericanmovers.net/",
     desc: "Web design",
-    image: stefanImg,
+    image: portfolioImg3,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
+    title: "Law Office of Michael Moyse",
+    url: "https://immigrationjourney.net/",
     desc: "Web design",
-    image: stefanImg,
+    image: portfolioImg4,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Pro Logs",
+    url: "https://www.prologs.us/",
+    desc: "Web design, Logo design & Graphic design",
+    image: portfolioImg5,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Mercator Global Logistics",
+    url: "https://mercatorglobal.net/",
+    desc: "Web design, Advertising & Social media managment",
+    image: portfolioImg6,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Brabus Freight",
+    url: "http://brabusfreightinc.net/",
+    desc: "Web design, Advertising & Social media managment",
+    image: portfolioImg7,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
+    title: "First Class Express",
+    url: "http://firstclassexpress.net/",
     desc: "Web design",
-    image: stefanImg,
+    image: portfolioImg8,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
+    title: "Ivis Bookkeeping",
+    url: "http://ivisbookkeeping.net/",
     desc: "Web design",
-    image: stefanImg,
+    image: portfolioImg9,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Midwest Elite Soccer Club",
+    url: "http://midwestelitesc.com/",
+    desc: "Logo design & Web design",
+    image: portfolioImg10,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Responsible Freight Carriers",
+    url: "https://rfcarriers.com/",
+    desc: "https://rfcarriers.com/",
+    image: portfolioImg11,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Braxxel",
+    url: "http://goldenutensils.net/",
+    desc: "Web design, Social media managment & Advertising",
+    image: portfolioImg12,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Frostcase",
+    url: "http://frostcase.net/",
+    desc: "Web design, Social media managment & Advertising",
+    image: portfolioImg13,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Nora Freight",
+    url: "https://vibecreative.net/wp-content/uploads/2021/12/Nora-Freight-1.png",
+    desc: "Logo design",
+    image: portfolioImg14,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "TPS Ukraine",
+    url: "https://tpsukraine.info/",
+    desc: "Logo design, Web design, Social media managment & Advertising",
+    image: portfolioImg15,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "DD Global MedDev",
+    url: "https://ddglobalmed.net/",
+    desc: "Logo design & Web design",
+    image: portfolioImg16,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "DHS Logistics Solution",
+    url: "https://www.instagram.com/dhs_logistics/",
+    desc: "Social media management & Advertising",
+    image: portfolioImg17,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Grans Transport",
+    url: "http://granstransport.net/",
+    desc: "Web design, Graphic design & Social media management",
+    image: portfolioImg18,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "OC Law Group",
+    url: "http://oclaw.us/",
+    desc: "Web design & Social media management",
+    image: portfolioImg19,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Old Empire",
+    url: "http://oldempireinc.net/",
+    desc: "Web design, Social media management & Advertising",
+    image: portfolioImg20,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Registruj kompaniju",
+    url: "https://registrujkompaniju.us/",
+    desc: "Logo design, Web design, Social media management",
+    image: portfolioImg21,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Zorja",
+    url: "https://zorjanatural.com/",
+    desc: "Logo design & Web design",
+    image: portfolioImg22,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "RV Rent n Go",
+    url: "https://www.instagram.com/rvrentngo/",
+    desc: "Social media management & Advertising",
+    image: portfolioImg23,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Stereo Logistics",
+    url: "https://stereologistics.com/",
+    desc: "Logo design & Web design",
+    image: portfolioImg24,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "TPS and Asylum",
+    url: "http://tpsandasylum.info/",
+    desc: "Logo design, Web design, Social media management & Advertising",
+    image: portfolioImg25,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Zelena karta",
+    url: "https://zelenakarta.us/",
+    desc: "Web design, Social media management & Advertising",
+    image: portfolioImg26,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Chaldean",
+    url: "https://chaldeanllc.com/",
+    desc: "Logo design & Web design",
+    image: portfolioImg27,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Holiday 101",
+    url: "https://www.facebook.com/holiday101.net",
+    desc: "Social media management & Advertising",
+    image: portfolioImg28,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
+    title: "Bishop Logistics",
+    url: "https://bishop-logistics.com/",
     desc: "Web design",
-    image: stefanImg,
+    image: portfolioImg29,
   },
   {
-    title: "AMG Logistics",
+    title: "Gergana Todorova",
     url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    desc: "Graphic design",
+    image: portfolioImg30,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "KMK Prints",
+    url: "https://www.facebook.com/profile.php?id=100039222437232",
+    desc: "Graphic design",
+    image: portfolioImg31,
   },
   {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
-  },
-  {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
-  },
-  {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
-  },
-  {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
-  },
-  {
-    title: "AMG Logistics",
-    url: "https://github.com/ipfs/js-ipfs/issues/4019",
-    desc: "Web design",
-    image: stefanImg,
+    title: "Florida Luxury Living",
+    url: "https://vibecreative.net/wp-content/uploads/2021/12/Florida-Luxury-Living.png",
+    desc: "Graphic design",
+    image: portfolioImg32,
   },
 ];
 

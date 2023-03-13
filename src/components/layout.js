@@ -1,11 +1,11 @@
 import Header from "./headerVibe";
 import Footer from "./footerVibe";
 
-import { Lato } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const poppins = Lato({
-  weight: ["400"],
-  subsets: ["latin"],
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin-ext"],
 });
 
 export default function Layout({ children }) {
