@@ -1,17 +1,9 @@
 import Head from "next/head";
 import Newsletter from "@/components/newsletter";
-import { ourPortfolio } from "@/helpers/staticData";
-import { useState, useEffect } from "react";
 import PortfolioCard from "@/components/PortfolioCard";
+import { ourPortfolio } from "@/helpers/staticData";
 
 export default function Portfolio() {
-  var [newPortfolio, setNewPorfolio] = useState([]);
-  var [page, setPage] = useState(1);
-
-  useEffect(() => {
-    setNewPorfolio(ourPortfolio.slice(0, newPortfolio.length + 10));
-  }, [page]);
-
   return (
     <>
       <Head>
@@ -69,7 +61,7 @@ export default function Portfolio() {
             </p>
           </div>
           <div className="flex flex-wrap gap-[16px] items-center justify-center">
-            {newPortfolio.map((item, index) => {
+            {ourPortfolio.map((item, index) => {
               return (
                 <PortfolioCard
                   title={item.title}
@@ -77,8 +69,6 @@ export default function Portfolio() {
                   desc={item.desc}
                   image={item.image}
                   key={index}
-                  isLast={index === newPortfolio.length - 1}
-                  newLimit={() => setPage(page + 1)}
                 />
               );
             })}

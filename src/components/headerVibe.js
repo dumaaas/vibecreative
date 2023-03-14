@@ -5,16 +5,9 @@ import InstagramIcon from "../../public/instagram-header-icon.svg";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { navigation } from "@/helpers/staticData";
-import MenuOpenIcon from "../../public/menu-open.svg";
-import MenuCloseIcon from "../../public/menu-close.svg";
 import { useState, useRef, useEffect } from "react";
-import { Poppins } from "next/font/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin-ext"],
-});
 export default function Header() {
   const router = useRouter();
 
@@ -46,7 +39,6 @@ export default function Header() {
   return (
     <header
       className={
-        poppins.className +
         "lg:px-[55px] px-[20px] py-[20px] bg-transparent absolute top-0 w-full z-[999] min-h-[134px] flex items-center justify-between"
       }
     >
