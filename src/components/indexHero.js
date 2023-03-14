@@ -8,6 +8,7 @@ export default function IndexHero() {
         autoPlay
         loop
         muted
+        playsInline
         className="absolute top-0 left-0 object-cover w-full h-full"
       >
         <source src="/Video.mp4" type="video/mp4" />

@@ -11,9 +11,11 @@ const poppins = Poppins({
 export default function Layout({ children }) {
   return (
     <>
-      <Header />
-      <main className={poppins.className}>{children}</main>
-      <Footer />
+      <div className="relative overflow-x-hidden">
+        <Header />
+        <main className={poppins.className}>{children}</main>
+        <Footer />
+      </div>
     </>
   );
 }

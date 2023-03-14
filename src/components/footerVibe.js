@@ -37,7 +37,7 @@ export default function Footer() {
         <Image src={logoPic} alt="logo" />
       </div>
       <div className="">
-        <p className="text-[14px] leading-[30px] text-center py-[40px] border border-t-[#e2e7f0]">© 2023 Vibe!</p>
+        <p className="text-[14px] leading-[30px] text-center py-[40px] ">© 2023 Vibe!</p>
       </div>
     </footer>
   );

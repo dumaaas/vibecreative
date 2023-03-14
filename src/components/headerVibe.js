@@ -47,7 +47,7 @@ export default function Header() {
     <header
       className={
         poppins.className +
-        " overflow-x-hidden lg:px-[55px] px-[20px] py-[20px] bg-transparent absolute top-0 w-full z-[999] min-h-[134px] flex items-center justify-between"
+        "lg:px-[55px] px-[20px] py-[20px] bg-transparent absolute top-0 w-full z-[999] min-h-[134px] flex items-center justify-between"
       }
     >
       <div className="flex flex-row items-center gap-[70px]">
