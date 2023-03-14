@@ -12,7 +12,7 @@ export default function Footer() {
             6829 N Ridge Blvd, Apt 208
           </p>
           <p className="text-[14px] leading-[26px] sm:text-left text-center">Chicago, Illinois 60645</p>
-          <p className="text-[14px] leading-[26px] sm:text-left text-center">(312) 442-215</p>
+          <p className="text-[14px] leading-[26px] sm:text-left text-center">(312) 442-2153</p>
           <div className="gap-[4px] mt-[20px] flex items-center justify-center sm:items-start sm:justify-start">
             <a href="https://www.facebook.com/vibecreative.chi" target="_blank">
               <FacebookIcon

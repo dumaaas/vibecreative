@@ -10,7 +10,7 @@ export default function Newsletter() {
         </div>
         <div className="flex flex-wrap gap-[20px]">
           <input className="sm:w-[350px] w-[250px]" type="text" placeholder="Email address" />
-          <button>Subscribe</button>
+          <button className="btn-dark">Subscribe</button>
         </div>
       </div>
     </div>

@@ -38,18 +38,15 @@ export default function Bookkeeping() {
         <meta
           property="og:image"
           content=" https://vibecreative.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvibe-about.32d3ffc5.png&w=640&q=75"
-          class="yoast-seo-meta-tag"
         ></meta>
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:label1"
           content="Est. reading time"
-          class="yoast-seo-meta-tag"
         />
         <meta
           name="twitter:data1"
           content="7 minutes"
-          class="yoast-seo-meta-tag"
         />
         <link rel="icon" href="/favicon.png" />
       </Head>

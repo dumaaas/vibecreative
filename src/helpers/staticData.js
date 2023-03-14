@@ -138,7 +138,7 @@ export const ourPortfolio = [
   {
     title: "Responsible Freight Carriers",
     url: "https://rfcarriers.com/",
-    desc: "https://rfcarriers.com/",
+    desc: "Logo design & Web design",
     image: portfolioImg11,
   },
   {

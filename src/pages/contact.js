@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Newsletter from "@/components/newsletter";
 import contactCover from "../../public/contact-cover.jpg";
-import { use, useState } from "react";
+import { useState } from "react";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Recaptcha from "@/components/recaptcha";
 
 export default function Contact() {
   const [nameError, setNameError] = useState(null);
@@ -20,8 +21,13 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [showSuccessMsg, setShowSuccessMsg] = useState(false);
   const [showErrorMsg, setShowErrorMsg] = useState(false);
+  const [reCaptchaToken, setReCaptchaToken] = useState(null);
 
   const form = useRef();
+
+  const handleRecaptchaVerify = (token) => {
+    setReCaptchaToken(token);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -170,19 +176,10 @@ export default function Contact() {
         <meta
           property="og:image"
           content=" https://vibecreative.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvibe-about.32d3ffc5.png&w=640&q=75"
-          class="yoast-seo-meta-tag"
         ></meta>
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:label1"
-          content="Est. reading time"
-          class="yoast-seo-meta-tag"
-        />
-        <meta
-          name="twitter:data1"
-          content="7 minutes"
-          class="yoast-seo-meta-tag"
-        />
+        <meta name="twitter:label1" content="Est. reading time" />
+        <meta name="twitter:data1" content="7 minutes" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div>
@@ -216,6 +213,7 @@ export default function Contact() {
                     onChange={(event) =>
                       checkValidationName(event.target.value)
                     }
+                    value={name}
                     className={`${nameError ? " invalid" : ""}`}
                     type="text"
                     name="from_firstname"
@@ -238,6 +236,7 @@ export default function Contact() {
                     onChange={(event) =>
                       checkValidationLastName(event.target.value)
                     }
+                    value={lastName}
                     className={`${lastNameError ? " invalid" : ""}`}
                     type="text"
                     name="from_lastname"
@@ -259,6 +258,7 @@ export default function Contact() {
                     onBlur={(event) => checkEmailError(event.target.value)}
                     onChange={(event) => checkEmailError(event.target.value)}
                     className={`${emailError ? " invalid" : ""}`}
+                    value={email}
                     type="text"
                     name="from_email"
                   />
@@ -276,6 +276,7 @@ export default function Contact() {
                     onBlur={(event) => checkPhoneError(event.target.value)}
                     onChange={(event) => checkPhoneError(event.target.value)}
                     className={`${phoneError ? " invalid" : ""}`}
+                    value={phone}
                     type="text"
                     name="from_phone"
                   />
@@ -296,6 +297,7 @@ export default function Contact() {
                     onChange={(event) => checkMessageError(event.target.value)}
                     className={`${messageError ? " invalid" : ""}`}
                     type="text"
+                    value={message}
                     name="from_message"
                   />
                   {messageError && (
@@ -305,15 +307,18 @@ export default function Contact() {
                   )}
                 </div>
               </div>
-              <button
-                disabled={isLoading || checkIfError()}
-                style={{ opacity: isLoading || checkIfError() ? 0.5 : 1 }}
-                className="mt-[10px] w-[180px]"
-              >
-                Send message
-              </button>
+              <div className="flex flex-wrap items-center justify-between mt-[20px]">
+                <Recaptcha onVerify={handleRecaptchaVerify} />
+                <button
+                  disabled={isLoading || checkIfError() || !reCaptchaToken}
+                  style={{ opacity: isLoading || checkIfError() || !reCaptchaToken ? 0.5 : 1 }}
+                  className="mt-[10px] w-[180px]"
+                >
+                  Send message
+                </button>
+              </div>
               {showSuccessMsg && (
-                <div className="bg-[#dff0d8] border border-[#008000] rounded-[8px] py-[12px] px-[16px] mt-[20px]">
+                <div className="bg-[#dff0d8] border border-[#008000] rounded-[8px] py-[12px] px-[16px] ">
                   <p className="text-[#008000]">
                     Message sent successfully. We will get back to you shortly!
                   </p>

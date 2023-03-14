@@ -38,6 +38,14 @@ button, .btn {
   color: #fff;
 }
 
+button.btn-dark {
+  background-color: #000;
+}
+
+button.btn-dark:hover {
+  background-color: rgba(0,0,0, 0.75);
+}
+
 button:hover, .btn:hover {
   background-color: #000;
 }
