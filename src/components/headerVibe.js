@@ -47,7 +47,7 @@ export default function Header() {
     <header
       className={
         poppins.className +
-        " lg:px-[55px] px-[20px] py-[20px] bg-transparent absolute top-0 w-full z-[999] min-h-[134px] flex items-center justify-between"
+        " overflow-x-hidden lg:px-[55px] px-[20px] py-[20px] bg-transparent absolute top-0 w-full z-[999] min-h-[134px] flex items-center justify-between"
       }
     >
       <div className="flex flex-row items-center gap-[70px]">
@@ -147,9 +147,11 @@ export default function Header() {
           </a>
         </div>
       </div>
-      <div className={`${menuOpen ? 'z-[998] opacity-1 w-screen h-screen' : 'z-[-1] opacity-0'} transition-opacity duration-150 ease-linear bg-black bg-opacity-90  absolute top-0 left-0`}>
-        
-        </div>
+      <div
+        className={`${
+          menuOpen ? "z-[998] opacity-1 w-screen h-screen" : "z-[-1] opacity-0"
+        } transition-opacity duration-150 ease-linear bg-black bg-opacity-90  absolute top-0 left-0`}
+      ></div>
     </header>
   );
 }
