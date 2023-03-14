@@ -4,7 +4,7 @@ import IndexHero from "@/components/indexHero";
 import ServicesItems from "@/components/servicesItems";
 import About from "@/components/about";
 import portfolioImg from "../../public/portfolio-cover.jpg";
-
+import Link from "next/link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -107,7 +107,7 @@ export default function Home() {
           <h2 className="z-20 text-white text-[32px] leading-[38px] mb-[25px] lg:mb-[30px] font-bold lg:text-[48px] lg:leading-[58px]">
             Check out our work
           </h2>
-          <button className="z-20"> Portfolio </button>
+          <Link href="/portfolio" className="z-20 btn"> Portfolio </Link>
         </div>
         <div className="py-[50px] container lg:max-w-screen-xl">
           <h2 className="relative text-center lg:text-[48px] lg:leading-[58px] text-[32px] leading-[38px] font-bold mb-[70px] after:content-[''] after:absolute after:w-[100px] after:h-[3px] after:left-[50%] after:transform after:translate-x-[-50%] after:translate-y-[50%] after:bg-primary after:bottom-[-20px]">
